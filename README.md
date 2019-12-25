@@ -1,4 +1,4 @@
-# Rock Paper Scissors - using JavaScript ❤
+# Rock Paper Scissors - using JavaScript 
 
 ### Human vs Computer
 
