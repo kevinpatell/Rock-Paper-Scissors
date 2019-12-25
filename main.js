@@ -7,9 +7,9 @@ document.addEventListener('DOMContentLoaded', function () {
     humanChoice = yourChoice.target.id;
     botChoice = randomBotRpsChoice(randomBotIntChoice());
     results = decideWinnner(humanChoice, botChoice);
-    message = resultMessage(results);
+    // message = resultMessage(results);
     score = scoreCard(results);
-    displayResult(humanChoice, botChoice, message);
+    displayResult(humanChoice, botChoice);
   };
   
   for(i=0; i<images.length; i++) {
@@ -49,18 +49,18 @@ document.addEventListener('DOMContentLoaded', function () {
     return [humanScore, botScore];
   };
   
-  let resultMessage = ([humanScore, botScore]) => {
-    let firstmsg = 'You'; 
-    if (humanScore === 0) {
-      return {'message': firstmsg + ' Lost !', 'color': 'red'};
-    } else if (humanScore === 0.5) {
-      return {'message': firstmsg  + ' Tied','color': 'yellow'
-    };
-  } else {
-    return {
-      'message': firstmsg + ' Won','color': 'green'};
-    }
-  };
+  // let resultMessage = ([humanScore, botScore]) => {
+  //   let firstmsg = 'You'; 
+  //   if (humanScore === 0) {
+  //     return {'message': firstmsg + ' Lost !', 'color': 'red'};
+  //   } else if (humanScore === 0.5) {
+  //     return {'message': firstmsg  + ' Tied','color': 'yellow'
+  //   };
+  // } else {
+  //   return {
+  //     'message': firstmsg + ' Won','color': 'green'};
+  //   }
+  // };
   
   let humanScoreCard = 0;
   let botScoreCard = 0;
@@ -75,7 +75,7 @@ document.addEventListener('DOMContentLoaded', function () {
     return [humanScoreCard, botScoreCard];
   };
   
-  let displayResult = (humanImageChoice, botImageChoice, resultMessage) => {
+  let displayResult = (humanImageChoice, botImageChoice) => {
     let imagesDatabase = {
       'rock': document.getElementById('rock').src,
       'paper': document.getElementById('paper').src,
@@ -97,11 +97,6 @@ document.addEventListener('DOMContentLoaded', function () {
     document.getElementById('human-selection').appendChild(humanBox);
     document.getElementById('bot-selection').appendChild(botBox);
     
-    let msg = document.getElementById('message');
-    msg.innerHTML= "<h3 style='color: " + resultMessage.color + "; ; font-size:2rem;'>" + resultMessage.message;
-
-    document.getElementById('game').style.padding="1.7rem 0 6rem 0";
-
     document.getElementById('human-score').innerHTML = humanScoreCard;
     document.getElementById('bot-score').innerHTML = botScoreCard;
   };
