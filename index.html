@@ -1,0 +1,43 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" type="text/css" href="main.css">
+    <link href="https://fonts.googleapis.com/css?family=Baskervvill|Poiret+One|Abel|Dosis|Kalame&display=swap" rel="stylesheet">
+  <title>Rock, Paper, Scissors</title>
+</head>
+<body>
+  <div class="main-container">
+    <h2>Rock, &nbsp;Paper, &nbsp;Scissors</h2>
+    <p>Satisfy your curiosity</p>
+    <a href="#game">PLAY THE GAME</a>
+  </div>
+  <div id="game">
+    <div id="message"></div>
+    <div class="choice-selected">
+      <div class="heading">
+        <div class="player score">
+          <h3>Player</h3>
+          <p id="human-score">0</p>
+        </div>
+        <div class="selection-box" id="human-selection"></div>
+        <div class="rps" id="rpsimg">
+          <img class="img" id="rock" src="http://images.clipartpanda.com/rock-clipart-clipart-harvestable-resources-rock.png" height=50, widht=50 alt="Rock">
+          <img class="img" id="paper" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQM0iUc-hwPNx1FLWnyEIRaHOr9bhCb2gkBHXc6a8B1hKI9bEFV&s" height=50 widht=50 alt="Paper">
+          <img class="img" id="scissors" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRQHc2fgScp5RJsCJulDcrAJ7xhKxDiSxEo-arTpRpkrSYgl7gn&s" height=50 widht=50 alt="Scissors">
+        </div>
+      </div>
+      <div class="heading">
+        <div class="program score">
+          <h3>My Program</h3>
+          <p id="bot-score">0</p>
+        </div>
+        <div class="selection-box" id="bot-selection"></div>
+      </div>
+    </div>
+  </div>
+  <footer id="footer"> &copy; JUST FOR FUN!</footer>
+  <script src="main.js"></script>
+</body>
+</html>
